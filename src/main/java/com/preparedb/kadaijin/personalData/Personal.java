@@ -8,8 +8,9 @@ public class Personal {
         Integer age = random;
     }
 
-    public void personalDB (Connection connection) {
+    public List<String> personalDB (Connection connection) {
         String path = "country.json";
+        List<String> countrys = new ArrayList<String>();
 
         ObjectMapper objectMapper = new ObjectMapper;
         File file = new File(path);
@@ -18,7 +19,10 @@ public class Personal {
 
         for (JsonNode one : data) {
             String country = one.asText;
+            countrys.add(one.asText);
             System.out.println(country);
         }
+
+        return countrys;
     }
 }
