@@ -1,0 +1,20 @@
+{
+  "id": 1,
+  "email": "example@gmail.com",
+  "password": "ryo",
+  "Log": [
+    {
+      "times": "2023-10-20T19:05:01.007Z",
+      "id": 0
+    }
+  ],
+  "personal_data": {
+    "personal_id": 1,
+    "name": "ryo",
+    "age": 17,
+    "phone": 12173816,
+    "country": "japan",
+    "cuty": "tokyo",
+    "user_id": 1
+  }
+}
