@@ -8,7 +8,7 @@ public class Personal {
         Integer age = random;
     }
 
-    public List<String> personalDB (Connection connection) {
+    public List<String> personalDB () {
         String path = "country.json";
         List<String> countrys = new ArrayList<String>();
 
@@ -24,5 +24,21 @@ public class Personal {
         }
 
         return countrys;
+    }
+
+    public List<String> city () {
+        List<String> citys = new ArrayList<String>();
+
+        String path = "city.json";
+        File file = new File(path);
+ 
+        ObjectMapper objectMapper = new ObjectMapper;
+
+        JsonNode json = objectMapper.readTree(file);
+        for (JsonNode one : json) {
+            citys.add (one.asText);
+            System.out.println(one.asText);
+        }
+        return citys; 
     }
 }
