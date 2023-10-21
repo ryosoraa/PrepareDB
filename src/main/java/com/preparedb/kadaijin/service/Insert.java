@@ -38,7 +38,6 @@ public class Insert {
             System.out.println(name.concat("@gmail.com"));
 
             Insert.query(connection, name);
-            Thread.sleep(1000);
 
         }
 
