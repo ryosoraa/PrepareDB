@@ -10,11 +10,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Insert {
+public class AccountInsert {
 
-    public static void query(Connection connection, String name) throws SQLException {
+    public static void query(Connection connection, String name, Integer id) throws SQLException {
 
-        String query = String.format("insert into accounts(username,password) values ('%s, '%s');",
+        String query = String.format("insert into accounts(id,username,password) values (%d,'%s, '%s');", id,
                 name.concat("@gmail.com'"), name);
 
         PreparedStatement preparedStatement;
@@ -33,11 +33,14 @@ public class Insert {
 
         JsonNode read = objectMapper.readTree(file);
 
+        Integer id = 1;
+
         for (JsonNode data : read) {
             String name = data.asText();
             System.out.println(name.concat("@gmail.com"));
 
-            Insert.query(connection, name);
+            AccountInsert.query(connection, name, id);
+            id++;
 
         }
 

@@ -1,16 +1,16 @@
 package com.preparedb.kadaijin.service;
 
 import java.sql.*;
-// import org.postgresql.ds.PGSimpleDataSource;
+import org.postgresql.ds.PGSimpleDataSource;
 
 public class Connect {
-    // public Connection cockroachDB() throws SQLException {
+    // public Connection connection() throws SQLException {
     // PGSimpleDataSource cockSource = new PGSimpleDataSource();
 
     // cockSource.setURL(
-    // "jdbc:postgresql://shrewd-boxer-6752.8nk.cockroachlabs.cloud:26257/kadaijin?sslmode=verify-full");
-    // cockSource.setUser("ryo");
-    // cockSource.setPassword("9bPaq-ZymIpT3GCJn0qyqA");
+    // "jdbc:postgresql://192.168.43.61:4444/defaultdb?sslmode=disable&user=root");
+    // // cockSource.setUser("");
+    // // cockSource.setPassword("");
 
     // Connection conect = cockSource.getConnection();
     // return conect;

@@ -10,10 +10,10 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Names {
+public class NamesAssets {
 
-    public void name() throws JsonProcessingException, IOException {
-
+    public List<String> names() throws JsonProcessingException, IOException {
+        List<String> name = new ArrayList<>();
         String path = "name.json";
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -22,15 +22,11 @@ public class Names {
         JsonNode read = objectMapper.readTree(file);
 
         for (JsonNode data : read) {
-            String name = data.asText();
-            System.out.println(name);
-
+            name.add(data.asText());
         }
 
+        return name;
+
     }
 
-    public static void main(String[] args) throws IOException {
-        Names names = new Names();
-        names.name();
-    }
 }

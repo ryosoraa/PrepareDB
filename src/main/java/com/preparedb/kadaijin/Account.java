@@ -6,15 +6,15 @@ import java.sql.SQLException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.preparedb.kadaijin.service.Connect;
-import com.preparedb.kadaijin.service.Insert;
+import com.preparedb.kadaijin.service.AccountInsert;
 
-public class Kdaijin {
+public class Account {
     public static void main(String[] args)
             throws JsonProcessingException, IOException, InterruptedException, SQLException {
 
         Connect connect = new Connect();
         Connection connection = connect.connection();
-        Insert.name(connection);
+        AccountInsert.name(connection);
 
         if (connection != null) {
             connection.close();
