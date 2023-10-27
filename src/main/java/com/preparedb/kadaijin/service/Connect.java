@@ -18,7 +18,7 @@ public class Connect {
 
     private final String url = "jdbc:mysql://localhost:3306/kadaijin";
     private final String user = "root";
-    private final String password = "";
+    private final String password = "12174";
 
     static Connection connect = null;
 

@@ -11,11 +11,11 @@ public class PersonalInsert {
             Integer phone,
             String country,
             String city,
-            Integer user_id) throws SQLException {
+            Integer accounts_id) throws SQLException {
 
         String query = String.format(
-                "INSERT INTO personal_data (name,age,phone,country,city,user_id) VALUES ('%s',%d,%d,'%s','%s',%d);",
-                name, age, phone, country, city, user_id);
+                "INSERT INTO personal_data (name,age,phone,country,city,accounts_id) VALUES ('%s',%d,%d,'%s','%s',%d);",
+                name, age, phone, country, city, accounts_id);
 
         PreparedStatement preparedb;
 

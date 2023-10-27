@@ -13,10 +13,10 @@ public class Logs {
         Connection connection = connect.connection();
         Random random = new Random();
 
-        Integer user_id = 14000;
+        Integer user_id = 1;
 
-        while (user_id <= 24501) {
-            Integer loop = random.nextInt(50);
+        while (user_id <= 24495) {
+            Integer loop = random.nextInt(10);
             System.out.println(user_id);
             while (loop > 1) {
                 LogsInsert.logs(connection, user_id);

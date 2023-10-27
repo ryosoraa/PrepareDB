@@ -12,9 +12,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class AccountInsert {
 
-    public static void query(Connection connection, String name, Integer id) throws SQLException {
+    public static void query(Connection connection, String name) throws SQLException {
 
-        String query = String.format("insert into accounts(id,username,password) values (%d,'%s, '%s');", id,
+        String query = String.format("insert into accounts(email,password) values ('%s, '%s');",
                 name.concat("@gmail.com'"), name);
 
         PreparedStatement preparedStatement;
@@ -33,14 +33,14 @@ public class AccountInsert {
 
         JsonNode read = objectMapper.readTree(file);
 
-        Integer id = 1;
+        // Integer id = 1;
 
         for (JsonNode data : read) {
             String name = data.asText();
             System.out.println(name.concat("@gmail.com"));
 
-            AccountInsert.query(connection, name, id);
-            id++;
+            AccountInsert.query(connection, name);
+            // id++;
 
         }
 

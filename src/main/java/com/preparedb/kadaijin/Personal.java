@@ -32,7 +32,8 @@ public class Personal {
                     ageAndPhone.age(),
                     ageAndPhone.phone(),
                     personalAssets.country(),
-                    personalAssets.city(), user_id);
+                    personalAssets.city(),
+                    user_id);
             user_id++;
             System.out.println(name);
             // Thread.sleep(200);

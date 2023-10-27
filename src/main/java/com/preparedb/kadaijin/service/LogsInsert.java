@@ -8,7 +8,7 @@ public class LogsInsert {
 
     public static void logs(Connection connection, Integer id) throws SQLException {
 
-        String query = String.format("INSERT INTO logs (user_id) VALUES (%d);", id);
+        String query = String.format("INSERT INTO logs (accounts_id) VALUES (%d);", id);
 
         PreparedStatement preparedStatement = null;
 
